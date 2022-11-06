@@ -6,7 +6,7 @@ state ("Pitfall")
 }
 start
 {
-    return (old.start == 0x23 && current.start == 0x16 && current.level == 0x0F);
+    return (current.start != 0x00 && old.loading == 0x00 && current.loading == 0x01 && current.level == 0x0F);
 }
 split
 {
